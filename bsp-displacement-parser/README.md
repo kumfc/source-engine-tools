@@ -1,6 +1,6 @@
 Before using:
 1. Make a copy of the original map file and place it somewhere else
-2. Go to the ./bin/ of the game
+2. Go to the ./bin/ folder of the game
 3. Run the following command to unpack the map
 ```
 ./bspzip.exe -game ../tf -repack C:/some/path/mapname.bsp
