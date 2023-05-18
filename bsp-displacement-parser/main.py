@@ -22,6 +22,7 @@ class Criteria:
     min_plane_dist_diff = 8
     min_angle = 150
     max_angle = 170
+    power_diff_tolerance = 45
 
 
 class BspData:
@@ -49,6 +50,46 @@ def tris_ang(tris):
         ang = 180 - ang
 
     return ang
+
+
+def closest_power_of_two(num):
+    num = abs(int(num))
+
+    n = num
+    n -= 1
+    n |= n >> 1
+    n |= n >> 2
+    n |= n >> 4
+    n |= n >> 8
+    n |= n >> 16
+    n += 1
+    p = n >> 1
+
+    if (n - num) > (num - p):
+        return p, num - p
+    else:
+        return n, n - num
+
+
+def has_negative_power_of_two_coord(vert, tolerance, f = False):
+    min_diff = 2 ** 32
+    mp = 0
+    for i in range(2):  # don't test z?
+        if vert.coord[i] >= 0:
+            if vert.coord[i] < tolerance:
+                power, diff = 0, vert.coord[i] + 2
+            else:
+                continue
+        else:
+            power, diff = closest_power_of_two(vert.coord[i])
+        if diff < min_diff:
+            min_diff = diff
+            mp = power
+
+    if f:
+        return mp, min_diff
+    else:
+        return min_diff <= tolerance
 
 
 def rand_img_name():
@@ -95,6 +136,9 @@ def main(map_name):
             if diff < Criteria.min_plane_dist_diff or not (Criteria.min_angle < ang < Criteria.max_angle) or abs(edge_vec[2]) < Criteria.min_height:
                 continue
 
+            if not has_negative_power_of_two_coord(edge.start, Criteria.power_diff_tolerance) and not has_negative_power_of_two_coord(edge.end, Criteria.power_diff_tolerance):
+                continue
+
             other_verts = (set(tris[0].verts) | set(tris[1].verts)) - {edge.start, edge.end}
 
             print(other_verts)
@@ -111,7 +155,9 @@ def main(map_name):
             if not heading_added:
                 md.next_displacement(i, disp.get_facing_setpos())
                 heading_added = True
-            md.add_spot(img_name, ang, diff, abs(edge_vec[2]))
+            md.add_spot(img_name, ang, diff, abs(edge_vec[2]), edge.start.coord, edge.end.coord,
+                        has_negative_power_of_two_coord(edge.start, Criteria.power_diff_tolerance, True),
+                        has_negative_power_of_two_coord(edge.end, Criteria.power_diff_tolerance, True))
 
             for b in tris:
                 b.reset_color()
@@ -130,4 +176,4 @@ def main_interactive(map_name, index):
 
 
 if __name__ == '__main__':
-    main('disp_test_onlybroken')
+    main('cp_coldfront')

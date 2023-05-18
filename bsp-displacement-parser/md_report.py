@@ -24,12 +24,12 @@ class MarkdownReport:
         self.write('```')
         self.write(setpos)
         self.write('```')
-        self.write('|Image|Angle|Plane dist diff|Height|')
-        self.write('|---|---|---|---|')
+        self.write('|Image|Angle|Plane dist diff|Height|Start|End|')
+        self.write('|---|---|---|---|---|---|')
 
-    def add_spot(self, img, angle, plane_dist_diff, height):
+    def add_spot(self, img, angle, plane_dist_diff, height, start_coord, end_coord, start_power, end_power):
         img = img.split('reports/')[1]
-        self.write(f'|![]({img})|{int(angle)}|{plane_dist_diff:.2f}|{height:.2f}|')
+        self.write(f'|![]({img})|{int(angle)}|{plane_dist_diff:.2f}|{height:.2f}|{start_coord}  [{start_power}]|{end_coord}  [{end_power}]|')
 
     def write(self, text):
         self.content += f'{text}\n'
