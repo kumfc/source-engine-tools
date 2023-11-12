@@ -12,6 +12,7 @@
 |**cp_yukon_final**|![](images/cp_yukon_final_l.jpg)|setpos 1334.228027 -2129.033203 214.116730;setang 17.994774 15.067128 0.000000|Red side. Slide from ground. Y around -2048, pitch = 26.3; yaw = 19.6, strafe to push further and build tp exit|**Banana Boi**, **Coronel**|
 |**pl_frontier_final**|![](images/pl_frontier_final.jpg)|setpos 2941.884766 -3978.215332 -99.176613;setang -9.075032 -36.360134 0.000000|h -37.N; -49 < yaw < -48.5, dispenser close placement|**No.10884**, **umfc**, **BUTA**, **Micák**|
 |**pl_borneo**|![](images/pl_borneo.jpg)|setpos 2705.280273 -1970.074341 -11.013588;setang 30.305202 -17.624945 0.000000|Ground slide|**Banana Boi**, **Coronel**|
+|**tc_hydro**|![](images/tc_hydro_s.jpg)|setpos -725.717407 -97.183502 728.172791;setang 3.474961 165.653824 0.000000|From ground, right side, aim left|**Slender**|
 |**tc_hydro**|![](images/tc_hydro.jpg)|setpos 71.968750 -747.294617 52.688168;setang -4.292808 -107.633263 0.000000|From sentry. h 109.5; yaw -106.3|**Banana Boi**|
 |**koth_suijin**|![](images/koth_suijin.jpg)|setpos -575.700378 1865.008667 -59.394608;setang -7.249805 -84.610390 0.000000|From dispenser next to the sign. X around -510, strafe to push further. Passing through is hard, but at least you can completely hide inside and build dispenser + sentry|**Azure**|
 
@@ -19,6 +20,7 @@
 These are the spots that used to be exploitable, but eventually got fixed by covering them with clip-brushes.
 |Map|Image|setpos|Notes|Found by|
 |--|--|--|--|--|
+|**cp_gravelpit_snowy**|![](images/cp_gravelpit_snowy.jpg)|setpos 107.639053 1867.525635 -539.961975;setang -3.309386 107.040245 0.000000|From dispenser, forward near 0|**Jessica**|
 |**pl_enclosure_final**|![](images/pl_enclosure_final.jpg)|setpos 4406.513672 -8028.038086 -187.968689;setang 2.749974 -30.215014 0.000000|From ground|**Jessica**, **BUTA**, **Slender**|
 |**cp_lavapit_final**|![](images/cp_lavapit_final_c.jpg)|setpos 2127.047607 -1.599238 -443.968689;setang 8.415008 0.214628 0.000000|From ground|**Coronel**|
 
@@ -31,4 +33,4 @@ These are the spots that you can use for hiding, but where you can't freely move
 |**cp_lavapit_final**|![](images/cp_lavapit_final_b.jpg)|setpos 115.313744 2631.914063 -387.921997;setang -9.020029 109.664581 0.000000|From dispenser/sentry|**umfc**|
 
 ## Not confirmed
-tc_hydro (around -660 100), vsh_nucleus (from roof near sign), cp_gravelpit (point B)
+vsh_nucleus (from roof near sign), cp_gravelpit (point B)
