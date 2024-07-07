@@ -15,6 +15,7 @@
 |**tc_hydro**|![](images/tc_hydro_s.jpg)|setpos -725.717407 -97.183502 728.172791;setang 3.474961 165.653824 0.000000|From ground, right side, aim left|**Slender**|
 |**tc_hydro**|![](images/tc_hydro.jpg)|setpos 71.968750 -747.294617 52.688168;setang -4.292808 -107.633263 0.000000|From sentry. h 109.5; yaw -106.3|**Banana Boi**|
 |**koth_suijin**|![](images/koth_suijin.jpg)|setpos -575.700378 1865.008667 -59.394608;setang -7.249805 -84.610390 0.000000|From dispenser next to the sign. X around -510, strafe to push further. Passing through is hard, but at least you can completely hide inside and build dispenser + sentry|**Azure**|
+|**pl_enclosure_final**|![](images/pl_enclosure_final_2.jpg)|setpos 2706.996582 -8484.116211 -288.394196;setang 9.285052 102.723976 0.000000|You need a friend from the enemy team which should hug the wall with Base Jumper and get stuck at certain height. This is quite hard to execute, so it's widely performed this with airstuck hack instead. After that, getting through wall is relatively simple. Around Z = -335.99 hold forward while aiming straigth to the wall. As you pass you will fall to the death trigger, so you want to prepare a teleport exit and hold mouse1 in order to quickly build it as building becomes available.|**DolphinYT**|
 
 ## Fixed spots
 These are the spots that used to be exploitable, but eventually got fixed by covering them with clip-brushes.
@@ -31,6 +32,7 @@ These are the spots that you can use for hiding, but where you can't freely move
 |**cp_dustbowl**|![](images/cp_dustbowl.jpg)|setpos 1963.573730 -221.901550 -127.013893;setang 2.584925 129.442276 0.000000|Second stage, from ground|*unknown*|
 |**plr_nightfall_final**|![](images/plr_nightfall_final.jpg)|setpos -171.122482 12945.343750 -294.090363;setang 2.309962 -67.083206 0.000000|From dispenser/sentry|**The Nubing**|
 |**cp_lavapit_final**|![](images/cp_lavapit_final_b.jpg)|setpos 115.313744 2631.914063 -387.921997;setang -9.020029 109.664581 0.000000|From dispenser/sentry|**umfc**|
+|**cp_yukon_final**|![](images/cp_yukon_final_half.jpg)|setpos -1003.458252 -1871.511108 447.203918;setang 1.602687 -115.488190 0.000000|From dispenser or sentry, around -2048. Full OOB is theoretically possible.|**翠月**|
 
 ## Not confirmed
 vsh_nucleus (from roof near sign), cp_gravelpit (point B)
